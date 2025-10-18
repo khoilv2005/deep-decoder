@@ -81,12 +81,12 @@ print(decoded)  # Output: Hello World!
 ```python
 from deep_decoder import deep_decode_data, get_decoding_statistics
 
-# Analyze suspicious payload
-suspicious_payload = "JTI1MkYlMjUyRXAlMjUyRXAlMjUyRiUyNTJGZXRjJTI1MkZwYXNzd2Q="
+# Analyze suspicious payload (Path Traversal Attack: Base64 + Double URL-encoded)
+suspicious_payload = "JTI1MkYuLiUyNTJGZXRjJTI1MkZwYXNzd2Q="
 result = deep_decode_data(suspicious_payload, max_iterations=20)
 
 print(f"🔍 Original: {suspicious_payload}")
-print(f"✅ Decoded: {result.final_data}")
+print(f"✅ Decoded: {result.final_data}")  # Output: /../etc/passwd
 print(f"📊 Encoding layers: {result.iterations}")
 print(f"⏱️ Time: {result.total_time_ms:.2f}ms")
 print(f"🔄 Cycle detected: {result.cycle_detected}")
