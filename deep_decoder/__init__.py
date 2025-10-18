@@ -33,7 +33,7 @@ from .decoder import (
     get_decoding_statistics,
 )
 
-__version__ = "1.0.1"
+__version__ = "1.0.2"
 __author__ = "khoilv2005"
 __all__ = [
     "deep_decode_data",

@@ -5,7 +5,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setup(
     name="deep-decoder",
-    version="1.0.1",
+    version="1.0.2",
     author="khoilv2005",
     author_email="khoilv2005@example.com",
     description="Deep Decoder for IDS/IPS, WAF - A comprehensive multi-layer encoding/decoding library for security analysis",
